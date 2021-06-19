@@ -8,7 +8,7 @@ class App extends React.Component {
     super()
 
     this.state = {
-      pets: [],
+      pets: [0],
       filters: {
         type: 'all'
       }
