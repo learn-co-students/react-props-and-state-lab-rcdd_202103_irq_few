@@ -315,9 +315,6 @@ const allPets = [
     isAdopted: false,
   },
 ];
-
 export const getAll = () => allPets;
-
 export const getByType = type => allPets.filter(pet => pet.type === type);
-
 export const getBetweenAge = (from, to) => allPets.filter(pet => pet.age >= from && pet.age <= to);

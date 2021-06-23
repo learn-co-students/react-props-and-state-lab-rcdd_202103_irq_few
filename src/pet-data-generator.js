@@ -30,7 +30,6 @@ const MALE_PET_NAMES = [
   "Trident",
   "Kennedy"
 ];
-
 const FEMALE_PET_NAMES = [
   "Butter",
   "Gin",
@@ -63,27 +62,19 @@ const FEMALE_PET_NAMES = [
   "Silent",
   "Mickey"
 ];
-
 const ANIMAL_TYPES = [ 'cat', 'cat', 'cat', 'cat', 'dog', 'dog', 'dog', 'dog', 'micropig' ];
-
 const uuid = require( 'node-uuid' );
-
 function getRandomAge() {
   return Math.ceil( Math.random() * 10 );
 }
-
 function getRandomWeight() {
   return Math.ceil( Math.random() * 6 );
 }
-
 function getRandomFromArray( arr ) {
   return arr[ Math.floor( Math.random() * arr.length ) ];
 }
-
 const AMOUNT_OF_PETS = 35;
-
 const result = [];
-
 for ( let i = 0; i < AMOUNT_OF_PETS; i++ ) {
   const pet = {
     id: uuid.v4(),
@@ -92,10 +83,7 @@ for ( let i = 0; i < AMOUNT_OF_PETS; i++ ) {
     age: getRandomAge(),
     weight: getRandomWeight(),
   };
-
   pet.name = pet.gender === 'male' ? getRandomFromArray( MALE_PET_NAMES ) : getRandomFromArray( FEMALE_PET_NAMES );
-
   result.push( pet );
 }
-
 console.log( JSON.stringify( result, null, 2 ) );
